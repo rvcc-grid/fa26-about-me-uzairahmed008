@@ -1,30 +1,97 @@
-/* Basic page setup */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    margin: 0;
-    padding: 40px;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me – Uzair Ahmed</title>
 
-/* Main heading */
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #222;
-}
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
 
-/* Images */
-img {
-    width: 200px;
-    margin: 15px;
-}
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-/* Paragraph styling */
-p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 20px auto;
-    line-height: 1.6;
-}
+<body>
+
+    <header>
+        <h1>About Me</h1>
+    </header>
+
+    <main>
+
+        <img src="images/avataaars.png" alt="My Avatar">
+        <img src="images/bob.svg" alt="My BOB">
+
+        <p>
+            Hello! My name is Uzair Ahmed. I am an Interface Design &amp;
+            Web Development major at RVCC. I enjoy technology, web
+            development, cars, photography, and learning new skills.
+        </p>
+
+        <section>
+            <h2>My Hobbies</h2>
+
+            <ul>
+                <li>Web Development</li>
+                <li>Cars and Automotive Research</li>
+                <li>Photography</li>
+                <li>Technology and AI</li>
+                <li>Swimming</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Photo Gallery</h2>
+
+            <hr>
+
+            <figure>
+                <img src="images/Bear-Mountain-640w.jpg" alt="View from Bear Mountain">
+                <figcaption>Bear Mountain</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/Lamborghini-640w.jpg" alt="Lamborghini vehicle">
+                <figcaption>Lamborghini</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/Pool-640w.jpg" alt="Swimming pool">
+                <figcaption>Pool</figcaption>
+            </figure>
+        </section>
+
+        <article>
+            <h2>The Adventures of Sherlock Holmes</h2>
+
+            <!-- Added ID here for the multi-column step -->
+            <div id="lit">
+                <p>
+                    Sherlock Holmes is one of the most famous detectives in literature.
+                    Through careful observation and logical reasoning, Holmes solves
+                    mysteries that often seem impossible to others.
+                </p>
+
+                <p>
+                    Accompanied by Dr. Watson, Holmes investigates unusual crimes,
+                    uncovers hidden clues, and reveals surprising truths. The stories
+                    continue to influence mystery and detective fiction today.
+                </p>
+
+                <p>
+                    The adventures are known for clever plots, memorable characters,
+                    and detailed investigations that challenge readers to solve the
+                    mystery alongside Holmes.
+                </p>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        © 2026 Uzair Ahmed
+    </footer>
+
+</body>
+</html>
