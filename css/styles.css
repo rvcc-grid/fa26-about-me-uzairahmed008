@@ -1,97 +1,201 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me – Uzair Ahmed</title>
+/* =========================================
+   GLOBAL STYLES & MOBILE (Default)
+   ========================================= */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5F5F5;
+    color: #234045;
+    margin: 0;
+    padding: 0;
+}
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+/* Header */
+header {
+    background-color: #234045;
+    padding: 2rem;
+    text-align: center;
+}
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #CEC5BA;
+}
 
-<body>
+/* Main content */
+main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
 
-    <header>
-        <h1>About Me</h1>
-    </header>
+/* Profile images (Only targeting the top two avatars) */
+main > img {
+    width: 200px;
+    border-radius: 10px;
+    margin: 1rem;
+}
 
-    <main>
+/* Footer */
+footer {
+    background-color: #3D666A;
+    color: #CEC5BA;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    font-size: 1rem;
+}
 
-        <img src="images/avataaars.png" alt="My Avatar">
-        <img src="images/bob.svg" alt="My BOB">
+/* Sections */
+section {
+    max-width: 900px;
+    margin: 2rem auto;
+}
 
-        <p>
-            Hello! My name is Uzair Ahmed. I am an Interface Design &amp;
-            Web Development major at RVCC. I enjoy technology, web
-            development, cars, photography, and learning new skills.
-        </p>
+/* Step 1: Decrease H2 margins */
+section h2 {
+    color: #4E8087;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
 
-        <section>
-            <h2>My Hobbies</h2>
+/* Step 1: Center Hobbies using Flexbox */
+section:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-            <ul>
-                <li>Web Development</li>
-                <li>Cars and Automotive Research</li>
-                <li>Photography</li>
-                <li>Technology and AI</li>
-                <li>Swimming</li>
-            </ul>
-        </section>
+ul {
+    list-style-position: inside;
+    padding: 1rem;
+}
 
-        <section>
-            <h2>Photo Gallery</h2>
+li {
+    margin: 0.5rem 0;
+}
 
-            <hr>
+/* Photo Gallery Default (Mobile) */
+figure {
+    margin: 2rem auto;
+}
 
-            <figure>
-                <img src="images/Bear-Mountain-640w.jpg" alt="View from Bear Mountain">
-                <figcaption>Bear Mountain</figcaption>
-            </figure>
+figure img {
+    width: 640px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
 
-            <figure>
-                <img src="images/Lamborghini-640w.jpg" alt="Lamborghini vehicle">
-                <figcaption>Lamborghini</figcaption>
-            </figure>
+figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #3D666A;
+}
 
-            <figure>
-                <img src="images/Pool-640w.jpg" alt="Swimming pool">
-                <figcaption>Pool</figcaption>
-            </figure>
-        </section>
+/* Article Default */
+article {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 1.5rem;
+    border: 2px solid #4E8087;
+    border-radius: 10px;
+    background-color: white;
+}
 
-        <article>
-            <h2>The Adventures of Sherlock Holmes</h2>
+article h2 {
+    color: #234045;
+    margin-bottom: 1rem;
+}
 
-            <!-- Added ID here for the multi-column step -->
-            <div id="lit">
-                <p>
-                    Sherlock Holmes is one of the most famous detectives in literature.
-                    Through careful observation and logical reasoning, Holmes solves
-                    mysteries that often seem impossible to others.
-                </p>
+article p {
+    text-align: left;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
 
-                <p>
-                    Accompanied by Dr. Watson, Holmes investigates unusual crimes,
-                    uncovers hidden clues, and reveals surprising truths. The stories
-                    continue to influence mystery and detective fiction today.
-                </p>
+/* Step 4: Fix Drop Caps (Only apply to first paragraph) */
+article p:first-child::first-letter {
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #4E8087;
+    float: left;
+    margin-right: 0.5rem;
+    line-height: 1;
+}
 
-                <p>
-                    The adventures are known for clever plots, memorable characters,
-                    and detailed investigations that challenge readers to solve the
-                    mystery alongside Holmes.
-                </p>
-            </div>
-        </article>
 
-    </main>
+/* =========================================
+   TABLET BREAKPOINT (60em / ~960px)
+   ========================================= */
+@media screen and (min-width: 60em) {
+    
+    /* Step 2: Gallery Grid (2fr 1fr ratio) */
+    figure {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+        gap: 1rem;
+    }
 
-    <footer>
-        © 2026 Uzair Ahmed
-    </footer>
+    figure img {
+        width: 100%;
+    }
 
-</body>
-</html>
+    figcaption {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        margin-left: 1rem;
+        margin-top: 0;
+    }
+
+    /* Step 3: Literature Multi-columns */
+    #lit {
+        max-width: 100%;
+        columns: 40rem;
+    }
+}
+
+
+/* =========================================
+   LARGER SCREEN BREAKPOINT (100em / ~1600px)
+   ========================================= */
+@media screen and (min-width: 100em) {
+    
+    /* Step 5: 3-Column Gallery Grid */
+    section:nth-of-type(2) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        max-width: 1400px;
+        margin: 3rem auto;
+    }
+
+    /* Make the h2 and hr span all 3 columns */
+    section:nth-of-type(2) h2,
+    section:nth-of-type(2) hr {
+        grid-column: 1 / -1;
+    }
+
+    /* Hide extra hr elements if they display wrong */
+    hr {
+        display: none;
+    }
+
+    /* Reset figure back to block so the captions fix themselves inside the grid */
+    figure {
+        display: block;
+        margin: 0;
+    }
+
+    figcaption {
+        font-size: 1.5rem;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+}
